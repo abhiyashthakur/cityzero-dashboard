@@ -5,7 +5,6 @@ import {
   findNextMilestone,
   projectedLandfillReduction,
   summarizeChallengeImpact
-} from './metrics.ts';
 } from './metrics';
 import type { Challenge, DiversionPoint, WasteMetric } from '../types';
 
