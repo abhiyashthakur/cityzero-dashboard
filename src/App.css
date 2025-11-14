@@ -309,6 +309,30 @@
   color: #0b76bf;
 }
 
+.site-footer {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 28px;
+  border: 1px solid #d6e2ec;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 18px 32px rgba(15, 60, 104, 0.05);
+}
+
+.site-footer div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.site-footer a {
+  color: #0b76bf;
+  font-weight: 600;
+}
+
 @media (max-width: 720px) {
   .app-shell__hero {
     flex-direction: column;

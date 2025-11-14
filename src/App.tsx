@@ -4,17 +4,19 @@ import { Leaderboard } from './components/Leaderboard';
 import { MetricCard } from './components/MetricCard';
 import { ParticipationPanel } from './components/ParticipationPanel';
 import { TrendChart } from './components/TrendChart';
+import { siteConfig } from './config/site';
+import type { WasteMetric } from './types';
 import './App.css';
 
 const App = () => (
   <main className="app-shell">
     <header className="app-shell__hero">
       <div>
-        <p className="app-shell__eyebrow">CityZero // Zero-Waste command center</p>
-        <h1>Real-time diversion, landfill drawdown, and community action</h1>
+        <p className="app-shell__eyebrow">{siteConfig.name} // Zero-Waste command center</p>
+        <h1>{siteConfig.tagline}</h1>
         <p className="app-shell__subtitle">
           Track municipal recycling, compost, and landfill metrics while rallying neighborhoods through friendly leaderboards and
-          citizen challenges.
+          citizen challenges across {siteConfig.city}.
         </p>
       </div>
       <div className="hero-stats">
@@ -34,7 +36,7 @@ const App = () => (
     <InsightBanner metrics={wasteMetrics} trend={diversionTrend} />
 
     <section className="grid grid--metrics">
-      {wasteMetrics.map((metric) => (
+      {wasteMetrics.map((metric: WasteMetric) => (
         <MetricCard key={metric.stream} metric={metric} />
       ))}
     </section>
@@ -45,6 +47,17 @@ const App = () => (
     </section>
 
     <ParticipationPanel champions={citizenChampions} challenges={neighborhoodChallenges} />
+
+    <footer className="site-footer">
+      <div>
+        <strong>{siteConfig.name}</strong>
+        <span>{siteConfig.domain.replace('https://', '')}</span>
+      </div>
+      <p>
+        Operated by the {siteConfig.authority}. Contact <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a> for
+        deployment or domain updates.
+      </p>
+    </footer>
   </main>
 );
 
