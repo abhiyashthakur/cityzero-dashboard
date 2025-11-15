@@ -1,78 +1,48 @@
 # CityZero — Zero-Waste Urban Management System
 
-A municipal operations dashboard that compares recycling, composting, and landfill flows while rewarding neighborhoods and residents for zero-waste participation.
+## The Challenge
 
-## Features
-- **Live diversion snapshot** with progress toward zero-waste goals.
-- **Waste stream scorecards** highlighting trend deltas and contamination rates.
-- **Interactive diversion chart** powered by Recharts for multi-stream visibility.
-- **District leaderboard** for healthy competition between neighborhoods.
-- **Citizen participation view** mapping challenges and community champions.
-- **Mobile-friendly layout** with responsive cards and stacked charts.
+Waste management systems are failing. Cities around the world are drowning in garbage, struggling to balance recycling, composting, and landfill operations while engaging citizens in meaningful change. Traditional systems lack transparency, community involvement, and real-time insights needed to drive sustainable behavior.
 
-## Tech stack
-- [Vite](https://vitejs.dev/) + React + TypeScript
-- [Recharts](https://recharts.org/) for visualizations
-- [Lucide](https://lucide.dev/) icons
-- [Vitest](https://vitest.dev/) + Testing Library for unit testing
+## Our Solution
 
-## Getting started
-1. **Install prerequisites**
-   - [Node.js](https://nodejs.org/) v18 or newer (includes `npm`)
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-3. **Run locally**
-   ```bash
-   npm run dev
-   ```
-   Vite will print the local URL (default `http://localhost:5173`).
-4. **Run the production build**
-   ```bash
-   npm run build
-   npm run preview
-   ```
-5. **Execute unit tests**
-   ```bash
-   npm run test
-   ```
+CityZero is a comprehensive municipal dashboard that transforms waste management through data-driven insights and community engagement. We empower cities to track, visualize, and optimize their zero-waste journey while rallying neighborhoods through friendly competition and citizen challenges.
 
-## Project structure
-```
-├─ src
-│  ├─ components     // Dashboard building blocks
-│  ├─ data           // Mock municipal data feeds
-│  ├─ config         // Site metadata (domain, contact info)
-│  ├─ utils          // Metric helpers + tests
-│  ├─ App.tsx        // Page composition
-│  └─ main.tsx       // React entrypoint
-├─ public/index.html // Shell document served by Vite
-├─ package.json
-└─ vite.config.ts
-```
+## Key Features
 
-## Deploying / publishing
-### Netlify + Namecheap custom domain
-1. **Connect the repo**: In Netlify, “Add new site → Import existing project”, pick GitHub `cityzero-dashboard`, and keep build command `npm run build`, publish directory `dist/`.
-2. **Enable continuous deploys**: Netlify will build on every `main` push using `netlify.toml`.
-3. **Add the custom domain**: In Netlify → Domain settings, add your Namecheap domain (e.g., `cityzero.city`). Netlify provides DNS records.
-4. **Configure Namecheap DNS**: In Namecheap dashboard, edit Advanced DNS:
-   - Set the root (`@`) and `www` records to Netlify’s IPv4/IPv6 values (or use a CNAME to `<yoursite>.netlify.app`).
-   - Wait for propagation (<24h). Netlify auto-provisions HTTPS.
+### 📊 Data Visualization
+- **Real-time waste stream tracking** — Monitor recycling, composting, and landfill metrics with live diversion rates
+- **Interactive trend charts** — Visualize six-month waste flow patterns and contamination rates
+- **Target gap analysis** — See exactly how close your city is to zero-waste goals
+- **Progress indicators** — Track monthly changes and celebrate milestones
 
-### GitHub push (if not done yet)
-```bash
-git init
-git add .
-git commit -m "feat: bootstrap CityZero dashboard"
-git branch -M main
-git remote add origin git@github.com:<your-account>/cityzero-dashboard.git
-git push -u origin main
-```
+### 👥 Citizen Participation
+- **District leaderboards** — Spark healthy competition between neighborhoods with participation scores
+- **Community challenges** — Engage households through time-bound zero-waste initiatives
+- **Citizen champions** — Recognize and reward top contributors driving local change
+- **Impact metrics** — Show residents exactly how their actions reduce landfill waste
 
-## Next steps
-- Swap mock data with live city data sources / APIs.
-- Gate leaderboard or participation actions behind authentication (CIVIC single sign-on, etc.).
-- Add alerting hooks to notify operations teams when contamination spikes.
-- Update `src/config/site.ts` with your final Namecheap domain + contact email before launch.
+### 📱 Mobile Responsiveness
+- **Adaptive layouts** — Seamless experience across desktop, tablet, and mobile devices
+- **Touch-optimized** — Charts and interactions designed for on-the-go engagement
+- **Fast performance** — Lightweight architecture ensures quick load times on any network
+
+## The Impact
+
+CityZero bridges the gap between municipal operations and citizen action, creating a transparent ecosystem where:
+- **Cities** gain actionable insights to optimize collection routes and reduce contamination
+- **Residents** see their direct impact and stay motivated through gamification
+- **Communities** compete constructively to become zero-waste leaders
+- **Environment** benefits from measurable waste diversion and landfill reduction
+
+## Technology
+
+Built with modern web technologies for reliability and scale:
+- React + TypeScript for robust component architecture
+- Recharts for interactive data visualizations
+- Real data integration from municipal sources
+- Responsive design for universal accessibility
+
+---
+
+**CityZero**: Turning waste management from a crisis into a community-driven movement toward sustainable urban futures.
